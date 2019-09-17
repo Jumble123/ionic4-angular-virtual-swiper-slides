@@ -1,0 +1,14 @@
+.swiper-container {
+    height: 100%;
+    width: 100%;
+    // background-color: red;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // background-color: blue;
+    font-size: 3em;
+}

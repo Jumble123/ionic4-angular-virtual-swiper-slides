@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Initial Slide ID: {{ slideId }}</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button [defaultHref]="['/slides-list', this.id]"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" 
+          [attr.data-swiper-slide-index]="(slidesData.from + idx)"
+          [style.left]="slidesData.offset + 'px'"
+          *ngFor="let slide of slidesData.slides; let idx = index">
+        <div *ngFor="let line of slide">{{ line }}</div>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</ion-content>

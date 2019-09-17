@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Slide Sets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item [routerLink]="['/slides-list', idx]" 
+      *ngFor="let ss of this.slidesService.slideSets; let idx = index">
+      <ion-label>{{ ss.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

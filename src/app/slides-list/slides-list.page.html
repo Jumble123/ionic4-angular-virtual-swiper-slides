@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ slideSet.title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/slide-sets"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item [routerLink]="['/slides', this.id, idx]" 
+              *ngFor="let slide of slideSet.slides; let idx = index">
+      <ion-label>{{ slide.join(' ') }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
